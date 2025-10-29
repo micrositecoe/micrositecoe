@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 263 70% 50%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 220 14% 96%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 263 70% 50%;
+    --radius: 0.5rem;
+    --gradient-primary: linear-gradient(135deg, hsl(263 70% 50% / 0.1), hsl(263 70% 50% / 0.03));
+    --gradient-accent: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 14% 96%));
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 231 20% 17%;
+    --foreground: 0 0% 98%;
+    --card: 235 22% 20%;
+    --card-foreground: 0 0% 98%;
+    --popover: 235 22% 20%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 263 70% 68%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 235 25% 24%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 235 20% 30%;
+    --muted-foreground: 240 5% 65%;
+    --accent: 263 70% 68%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 235 25% 28%;
+    --input: 235 25% 28%;
+    --ring: 263 70% 68%;
+    --gradient-primary: linear-gradient(135deg, hsl(263 70% 68%), hsl(280 70% 58%));
+    --gradient-accent: linear-gradient(180deg, hsl(231 20% 17%), hsl(235 22% 20%));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
